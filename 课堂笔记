@@ -1,0 +1,17 @@
+保留小数的方法:
+#include <iomanip>
+using namespace std:
+int main()
+{
+
+double k=0.123456;
+
+cout<<setiosflags(ios::fixed) <<setprecision(2)<<endl; 
+
+cout.setf(ios::fixed); 
+cout<<setprecision(2)<<endl;
+
+cout<<fixed<<setprecision (2)<<endl;
+
+printf("%.3f",k);
+}
