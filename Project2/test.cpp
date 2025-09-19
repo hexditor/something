@@ -1,0 +1,192 @@
+#include <iostream>
+#include <string>
+
+
+using namespace std;
+
+//输入a、b、c三个值，输出其中最大值。
+/*int main()
+{
+	int a;
+	int b;
+	int c;
+	cin >> a >> b >> c;
+	if (a>b && a>c)
+	{
+		cout << a << endl;
+	}
+	else if (b>a && b>c)
+	{
+		cout << b << endl;
+	}
+	else
+	{
+		cout << c << endl;
+	}
+
+}
+*/
+
+//从键盘输入长方形的长和宽，输出该长方形的周长和面积。
+/*
+int main()
+{
+	int a;
+	int b;
+	cin >> a >> b;
+	cout <<  2 * (a + b);
+	cout <<  a * b ;
+}
+*/
+
+//输入一个华氏温度，要求输出摄氏温度。(保留两位小数)
+/*int main()
+{
+	double f;
+	cin >> f;
+	double c= (f - 32) * 5.0 / 9.0;
+	printf("%.2f\n",c);
+}
+*/
+
+//设圆半径r，圆柱高h 求圆周长C1、圆面积Sa、圆球表面积Sb、圆球体积Va、圆柱体积Vb。 输入数据，输出计算结果，输出时要求文字说明，取小数点后两位数字。圆周率取值3.14
+/*int main()
+{
+	double r, h;
+	cin >> r >> h;
+	double pi = 3.14;
+	double C1 = 2 * pi * r;
+	double Sa = pi * r * r;
+	double Sb = 4 * pi * r * r;
+	double Va = (4.0 / 3.0) * pi * r * r * r;
+	double Vb = pi * r * r * h;
+	printf("C1=%.2f\n", C1);
+	printf("Sa=%.2f\n", Sa);
+	printf("Sb=%.2f\n", Sb);
+	printf("Va=%.2f\n", Va);
+	printf("Vb=%.2f\n", Vb);
+}
+*/
+//给出一百分制成绩，要求输出成绩等级‘A’、‘B’、‘C’、‘D’、‘E’。 90分以上为A 80-89分为B 70-79分为C 60-69分为D 60分以下为E
+/*int main()
+{
+	int score;
+	cin >> score;
+	if (score >= 90)
+	{
+		cout << "A" << endl;
+	}
+	else if (score >= 80&&score<90)
+	{
+		cout << "B" << endl;
+	}
+	else if (score >= 70&&score<80)
+	{
+		cout << "C" << endl;
+	}
+	else if (score >= 60&&score<70)
+	{
+		cout << "D" << endl;
+	}
+	else
+	{
+		cout << "E" << endl;
+	}
+}
+*/
+/*企业发放的奖金根据利润提成。利润低于或等于100000元的，奖金可提10%;
+利润高于100000元，低于200000元（100000 < I≤200000）时，低于100000元的部分按10％提成，高于100000元的部分，可提成 7.5 %;
+200000 < I≤400000时，低于200000元部分仍按上述办法提成，（下同），高于200000元的部分按5％提成；
+	400000 < I≤600000元时，高于400000元的部分按3％提成；600000 < I≤1000000时，高于600000元的部分按1.5 % 提成；
+	I>1000000时，超过1000000元的部分按1 % 提成。从键盘输入当月利润I, 求应发奖金总数。
+
+	输入格式
+	一个整数，当月利润。
+
+	输出格式
+	一个整数，奖金。
+	*/
+	/*int main()
+	{
+		int I;
+		cin >> I;
+		double bonus ;
+		if (I <= 100000)
+		{
+			bonus = I * 0.1;
+		}
+		else if (I <= 200000&&I>100000)
+		{
+			bonus = 100000 * 0.1 + (I - 100000) * 0.075;
+		}
+		else if (I <= 400000&&I>200000)
+		{
+			bonus = 100000 * 0.1 + 100000 * 0.075 + (I - 200000) * 0.05;
+		}
+		else if (I <= 600000&&I>400000)
+		{
+			bonus = 100000 * 0.1 + 100000 * 0.075 + 200000 * 0.05 + (I - 400000) * 0.03;
+		}
+		else if (I <= 1000000&&I>600000)
+		{
+			bonus = 100000 * 0.1 + 100000 * 0.075 + 200000 * 0.05 + 200000 * 0.03 + (I - 600000) * 0.015;
+		}
+		else
+		{
+			bonus = 100000 * 0.1 + 100000 * 0.075 + 200000 * 0.05 + 200000 * 0.03 + 400000 * 0.015 + (I - 1000000) * 0.01;
+		}
+		printf("%.0f\n", bonus);
+	}
+	*/
+
+
+	/*int main()
+	{
+		int a, b;
+		cin >> a >> b;
+		if (a > b)
+		{
+			cout << a << b;
+		}
+		else
+		{
+			cout << b << a;
+		}
+	}
+	*/
+
+	//给出一个不多于5位的整数，要求 1、求出它是几位数 2、分别输出每一位数字 3、按逆序输出各位数字
+int main()
+{
+	int a;
+	cin >> a;
+	int b, c, d, e, f;
+	if (a >= 10000)
+	{
+		cout << 5 << endl;
+	}
+	else if (a >= 1000 && a < 10000)
+	{
+		cout << 4 << endl;
+	}
+	else if (a >= 100 && a < 1000)
+	{
+		cout << 3 << endl;
+	}
+	else if (a >= 10 && a < 100)
+	{
+		cout << 2 << endl;
+	}
+	else
+	{
+		cout << 1 << endl;
+	}
+	b = a / 10000;
+	c = (a - b * 10000) / 1000;
+	d = (a - b * 10000 - c * 1000) / 100;
+	e = (a - b * 10000 - c * 1000 - d * 100) / 10;
+	f = (a - b * 10000 - c * 1000 - d * 100 - e * 10);
+	cout << b << " " << c << " " << d << " " << e << " " << f << endl;
+	cout << f << e << d << c << b << endl;
+
+}
