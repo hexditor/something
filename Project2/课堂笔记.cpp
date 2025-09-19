@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <iostream>
 using namespace std;
-    int main()
+/*int main()
 {
 
     double k = 0.123456;
@@ -17,6 +17,7 @@ using namespace std;
 
     printf("%.3f", k);
 }
+*/
 
 
 //指针:
@@ -61,10 +62,21 @@ int &A=a;
 
 */
 
+//进制
+/*
+int a =10
+cout<<oct<<a; //输出八进制数12
+cout<<dec<<a; //输出十进制数10
+cout<<hex<<a; //输出十六进制数a
+*/
 
-
-
-
-
+//数学
+/*
+需头文件#include <cmath>
+平方根      sqrt()
+绝对值      abs()
+浮点型绝对值 fabs()
+幂运算      pow (底数, 指数)
+*/
 
 

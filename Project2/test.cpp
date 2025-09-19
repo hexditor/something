@@ -1,7 +1,4 @@
 #include <iostream>
-#include <string>
-
-
 using namespace std;
 
 //输入a、b、c三个值，输出其中最大值。
@@ -95,8 +92,8 @@ int main()
 }
 */
 /*企业发放的奖金根据利润提成。利润低于或等于100000元的，奖金可提10%;
-利润高于100000元，低于200000元（100000 < I≤200000）时，低于100000元的部分按10％提成，高于100000元的部分，可提成 7.5 %;
-200000 < I≤400000时，低于200000元部分仍按上述办法提成，（下同），高于200000元的部分按5％提成；
+ 利润高于100000元，低于200000元（100000 < I≤200000）时，低于100000元的部分按10％提成，高于100000元的部分，可提成 7.5 %;
+ 200000 < I≤400000时，低于200000元部分仍按上述办法提成，（下同），高于200000元的部分按5％提成；
 	400000 < I≤600000元时，高于400000元的部分按3％提成；600000 < I≤1000000时，高于600000元的部分按1.5 % 提成；
 	I>1000000时，超过1000000元的部分按1 % 提成。从键盘输入当月利润I, 求应发奖金总数。
 
@@ -106,7 +103,7 @@ int main()
 	输出格式
 	一个整数，奖金。
 	*/
-	/*int main()
+/*int main()
 	{
 		int I;
 		cin >> I;
@@ -140,7 +137,7 @@ int main()
 	*/
 
 
-	/*int main()
+/*int main()
 	{
 		int a, b;
 		cin >> a >> b;
@@ -156,7 +153,7 @@ int main()
 	*/
 
 	//给出一个不多于5位的整数，要求 1、求出它是几位数 2、分别输出每一位数字 3、按逆序输出各位数字
-int main()
+/*int main()
 {
 	int a;
 	cin >> a;
@@ -190,3 +187,170 @@ int main()
 	cout << f << e << d << c << b << endl;
 
 }
+*/
+/*int main()
+{
+	double x1, y1, x2, y2;
+	cin >> x1 >> y1 >> x2 >> y2;
+	double distance = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+	printf("%.2f\n", distance);
+}
+*/
+
+
+
+
+//求Sn=a+aa+aaa+…+aa…aaa（有n个a）之值，其中a是一个数字。例如：2+22+222+2222+22222（n=5），n由键盘输入。假定a为2.
+/*int main()
+{
+	int n;
+	cin >> n;
+	int a = 2;
+	int sum = 0;
+	int term = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		term = term * 10 + a;
+		sum = sum + term;
+	}
+	cout << sum << endl;
+}
+*/
+
+//输入两个正整数m和n，求其最大公约数和最小公倍数。
+/*
+int main()
+{
+	int m, n;
+	cin >> m >> n;
+	int a = m;
+	int b = n;
+	while (b != 0)
+	{
+		int r = a % b;
+		a = b;
+		b = r;
+	}
+	int gcd = a; 
+	int lcm = m * n / gcd; 
+	cout << gcd << endl;
+	cout << lcm << endl;
+}
+*/
+
+//求Sn=1!+2!+3!+4!+5!+…+n!之值，其中n是一个数字。
+
+/*
+int main()
+{
+	int n;
+	cin >> n;
+	int sum = 0;
+	int fact = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		fact *= i;      
+		sum += fact;    
+	}
+	cout << sum << endl;
+}
+*/
+
+//求以下三个数的和，结果保留2位小数。三个数分别是： 1~a之和、 1~b的平方和、 1~c的倒数和,其中，a、b、c均为正整数。
+/*
+int main()
+{
+	int a, b, c;
+	cin >> a >> b >> c;
+	double sum1 = 0;
+	double sum2 = 0;
+	double sum3 = 0;
+	for (int i = 1; i <= a; i++)
+	{
+		sum1 += i;
+	}
+	for (int i = 1; i <= b; i++)
+	{
+		sum2 += i * i;
+	}
+	for (int i = 1; i <= c; i++)
+	{
+		sum3 += 1.0 / i;
+	}
+	double sum = sum1 + sum2 + sum3;
+	printf("%.2f\n", sum);
+}
+*/
+
+//打印出所有"水仙花数"，所谓"水仙花数"是指一个三位数，其各位数字立方和等于该本身。
+/*int main()
+{
+	for (int i = 100; i <= 999; i++)
+	{
+		int a = i / 100;
+		int b = (i / 10) % 10;
+		int c = i % 10;
+		if (i == a * a * a + b * b * b + c * c * c)
+		{
+			cout << i << endl;
+		}
+	}
+}
+*/
+
+
+//求出10至1000之内能同时被2、3、7整除的数，并输出。每行一个
+/*int main()
+{
+	for (int i = 10; i <= 1000; i++)
+	{
+		if (i % 2 == 0 && i % 3 == 0 && i % 7 == 0)
+		{
+			cout << i << endl;
+		}
+	}
+}
+*/
+
+
+//有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13...求出这个数列的前N项之和，其中N由键盘输入。
+/*int main()
+{
+    int N;
+    cin >> N;
+    double sum = 0.0;
+    double numerator = 2.0, denominator = 1.0;
+    for (int i = 1; i <= N; i++)
+    {
+        sum += numerator / denominator;
+        double temp = numerator;
+        numerator = numerator + denominator;
+        denominator = temp;
+    }
+    printf("%.2f\n", sum);
+}
+*/
+
+//筛选出N以内的素数，N由键盘输入。
+/*int main()
+{
+	int N;
+	cin >> N;
+	for (int i = 2; i <= N; i++)
+	{
+		bool isPrime = true;
+		for (int j = 2; j * j <= i; j++)
+		{
+			if (i % j == 0)
+			{
+				isPrime = false;
+				break;
+			}
+		}
+		if (isPrime)
+		{
+			cout << i << endl;
+		}
+	}
+}
+*/
