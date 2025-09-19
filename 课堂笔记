@@ -5,7 +5,8 @@ int main()
 {
 
 double k=0.123456;
-
+//变量必须是浮点型
+//前三种作用于全局，最后一种只作用于一个变量
 cout<<setiosflags(ios::fixed) <<setprecision(2)<<endl; 
 
 cout.setf(ios::fixed); 
