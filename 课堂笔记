@@ -1,4 +1,4 @@
-保留小数的方法:
+//保留小数的方法:
 #include <iomanip>
 using namespace std:
 int main()
@@ -16,3 +16,23 @@ cout<<fixed<<setprecision (2)<<endl;
 
 printf("%.3f",k);
 }
+
+
+//指针:
+1.取址符:&
+double <<a; 
+cout <<&a; //会输出a的地址(也叫指针)
+2.间址符:*
+cout <<*(&a);
+//表示变量a的地址所指的对象，即变量a
+3.整型指针: int *
+int *a;    //此时a储存的是地址
+int p=55;
+a=&p;      //此时a储存的是p的地址
+cout <<a;  //输出p的地址
+cout <<*a; //输出"55"
+a++;       
+//将指针右移一位，此时a储存p右侧一位的内存的地址
+
+
+
