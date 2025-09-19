@@ -1,5 +1,6 @@
 //保留小数的方法:
 #include <iomanip>
+#include <iostream>
 using namespace std;
     int main()
 {
