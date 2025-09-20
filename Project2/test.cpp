@@ -191,21 +191,145 @@ int main()
 
 }
 
-//输入两个正整数m和n，求其最大公约数和最小公倍数。
 /*int main()
+{
+	double x1, y1, x2, y2;
+	cin >> x1 >> y1 >> x2 >> y2;
+	double distance = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+	printf("%.2f\n", distance);
+}
+*/
+
+
+
+
+//求Sn=a+aa+aaa+…+aa…aaa（有n个a）之值，其中a是一个数字。例如：2+22+222+2222+22222（n=5），n由键盘输入。假定a为2.
+/*int main()
+{
+	int n;
+	cin >> n;
+	int a = 2;
+	int sum = 0;
+	int term = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		term = term * 10 + a;
+		sum = sum + term;
+	}
+	cout << sum << endl;
+}
+*/
+
+//输入两个正整数m和n，求其最大公约数和最小公倍数。
+/*
+int main()
 {
 	int m, n;
 	cin >> m >> n;
-	int a = m, b = n;
+	int a = m;
+	int b = n;
 	while (b != 0)
 	{
 		int r = a % b;
 		a = b;
 		b = r;
 	}
-	int gcd = a;
-	int lcm = m * n / gcd;
+	int gcd = a; 
+	int lcm = m * n / gcd; 
 	cout << gcd << endl;
 	cout << lcm << endl;
 }
 */
+
+//求Sn=1!+2!+3!+4!+5!+…+n!之值，其中n是一个数字。
+
+/*
+int main()
+{
+	int n;
+	cin >> n;
+	int sum = 0;
+	int fact = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		fact *= i;      
+		sum += fact;    
+	}
+	cout << sum << endl;
+}
+*/
+
+//求以下三个数的和，结果保留2位小数。三个数分别是： 1~a之和、 1~b的平方和、 1~c的倒数和,其中，a、b、c均为正整数。
+/*
+int main()
+{
+	int a, b, c;
+	cin >> a >> b >> c;
+	double sum1 = 0;
+	double sum2 = 0;
+	double sum3 = 0;
+	for (int i = 1; i <= a; i++)
+	{
+		sum1 += i;
+	}
+	for (int i = 1; i <= b; i++)
+	{
+		sum2 += i * i;
+	}
+	for (int i = 1; i <= c; i++)
+	{
+		sum3 += 1.0 / i;
+	}
+	double sum = sum1 + sum2 + sum3;
+	printf("%.2f\n", sum);
+}
+*/
+
+//打印出所有"水仙花数"，所谓"水仙花数"是指一个三位数，其各位数字立方和等于该本身。
+/*int main()
+{
+	for (int i = 100; i <= 999; i++)
+	{
+		int a = i / 100;
+		int b = (i / 10) % 10;
+		int c = i % 10;
+		if (i == a * a * a + b * b * b + c * c * c)
+		{
+			cout << i << endl;
+		}
+	}
+}
+*/
+
+
+//求出10至1000之内能同时被2、3、7整除的数，并输出。每行一个
+/*int main()
+{
+	for (int i = 10; i <= 1000; i++)
+	{
+		if (i % 2 == 0 && i % 3 == 0 && i % 7 == 0)
+		{
+			cout << i << endl;
+		}
+	}
+}
+*/
+
+
+//有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13...求出这个数列的前N项之和，其中N由键盘输入。
+int main()
+{
+    int N;
+    cin >> N;
+    double sum = 0.0;
+    double numerator = 2.0, denominator = 1.0;
+    for (int i = 1; i <= N; i++)
+    {
+        sum += numerator / denominator;
+        double temp = numerator;
+        numerator = numerator + denominator;
+        denominator = temp;
+    }
+    printf("%.2f\n", sum);
+}
+
