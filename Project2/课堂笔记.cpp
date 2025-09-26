@@ -70,6 +70,14 @@ cout<<dec<<a; //输出十进制数10
 cout<<hex<<a; //输出十六进制数0xa
 */
 
+//数学
+/*
+需头文件#include <cmath>
+平方根      sqrt()
+绝对值      abs()
+浮点型绝对值 fabs()
+*/
+
 
 
 
