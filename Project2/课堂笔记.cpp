@@ -15,7 +15,9 @@ using namespace std;
 
     cout << fixed << setprecision(2) << endl;
 
+
     printf("%.3f", k);
+//为了防止程序报错，也可以加头文件<studio.h>
 //如果想使用科学计数法，要用printf("%.3e", k);
 }
 
