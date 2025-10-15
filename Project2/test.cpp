@@ -412,3 +412,35 @@ int main()
     }
 }
 */
+
+//输入二次方程ax^2+bx+c=0的三个系数a, b, c, 计算方程的根
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+    double a, b, c;
+    cin >> a >> b >> c;
+    double delta = b * b - 4 * a * c;
+    if (delta < 0)
+     {
+        double r=(-b)/(2*a); 
+        double i=sqrt(-delta)/(2*a); 
+        if(r==0)
+        {
+        cout <<i<<"i"<<' '<<"-"<<i<<"i";
+        }
+        else
+        {
+        cout <<r<<"+"<<i<<"i"<<' '<<r<<"-"<<i<<"i";
+        }
+    }
+    else
+    {
+    double x1 = (-b + sqrt(delta)) / (2 * a);
+    double x2 = (-b - sqrt(delta)) / (2 * a);
+    if (x2 > x1) swap(x1, x2);
+    cout << x1 << " " << x2 << endl;
+    }
+}
