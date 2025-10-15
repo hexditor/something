@@ -354,3 +354,24 @@ int main()
 	}
 }
 */
+
+//判断一个数是否是素数
+/*
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n; 
+    cin>>n; 
+    for (int i=2; i<n; i++)
+    {
+    if(n%i==0)
+    {cout<<"not prime"; 
+    break; }
+    else if(i==n-1)
+    {cout<<"prime";
+    break;  }
+    }
+}
+*/
