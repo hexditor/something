@@ -414,10 +414,7 @@ int main()
 */
 
 //输入二次方程ax^2+bx+c=0的三个系数a, b, c, 计算方程的根
-#include<iostream>
-#include<cmath>
-using namespace std;
-
+/*
 int main()
 {
     double a, b, c;
@@ -444,3 +441,65 @@ int main()
     cout << x1 << " " << x2 << endl;
     }
 }
+*/
+
+/*输入数字和图形，打印图形
+输入:
+5
+*
+输出:
+  *
+ ***
+*****
+ ***
+  *
+*/
+/*
+int main()
+{
+    int N;
+    cin>>N;
+    int n ;
+    n=(N+1)/2;
+    char ch; 
+    cin>>ch; 
+    for(int i=1;i<=n;i++)
+    {
+    for(int j=1;j<=n;j++)
+    {
+    if(j<=n-i)
+    {
+    cout<<" ";
+    }
+    else
+    {
+    cout<<ch;
+    }
+    }
+    for(int k=1; k<i; k++)
+    {
+    cout<<ch; 
+    }
+    cout<<endl;
+    }
+    for(int a=n; a>=1; a--)
+    {
+    for(int b=n; b>=1; b--)
+    {
+    if(b>=a)
+    {
+    cout<<" ";
+    }
+    else
+    {
+    cout<<ch; 
+    }
+    }
+    for(int c=a-1; c>=2;c--)
+    {
+    cout<<ch;
+    }
+    cout<<endl; 
+    }
+}
+*/
