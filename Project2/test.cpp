@@ -503,3 +503,22 @@ int main()
     }
 }
 */
+//A每天给B 10万元，b每天给A2^(n-1)元，即第一天一元，第二天两元，第三天4元，求第N天后，A开始赚钱
+/*
+int main()
+{
+    double a;
+    int b;
+    int n;
+    for(n=1; n>0; n++)
+    {
+        a=pow(2, n)-1;
+        b=100000*n;
+        if(a>b)
+        {
+            break;
+        }
+    }
+    cout<<n;
+}
+*/
